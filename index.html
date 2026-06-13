@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZenDash — Personal Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <span class="logo">ZenDash</span>
+    <button class="btn-theme" id="themeToggle">Toggle Theme</button>
+  </header>
+
+  <main class="main-content">
+
+    <section class="hero">
+      <p class="greeting">Welcome to ZenDash</p>
+      <p class="hero-sub">Let's make today count.</p>
+    </section>
+
+    <div class="widget-grid">
+
+      <div class="card" id="taskWidget">
+        <h2 class="card-title">Task Tracker</h2>
+
+        <div class="task-input-row">
+          <input
+            type="text"
+            id="taskInput"
+            class="input-field"
+            placeholder="e.g., Buy groceries"
+            maxlength="120"
+          />
+          <button class="btn-primary" id="addTaskBtn">Add Task</button>
+        </div>
+
+        <p class="warning hidden" id="taskWarning">
+          Please type something before adding a task.
+        </p>
+
+        <ul class="task-list" id="taskList"></ul>
+
+        <p class="empty-state" id="emptyState">
+          All caught up! Time to relax.
+        </p>
+      </div>
+
+      <div class="card" id="budgetWidget">
+        <h2 class="card-title">Quick Budget</h2>
+
+        <label class="input-label" for="budgetTotal">Total Budget ($)</label>
+        <input
+          type="number"
+          id="budgetTotal"
+          class="input-field"
+          placeholder="e.g., 2000"
+          min="0"
+        />
+
+        <label class="input-label" for="budgetExpenses">Expenses ($)</label>
+        <input
+          type="number"
+          id="budgetExpenses"
+          class="input-field"
+          placeholder="e.g., 850"
+          min="0"
+        />
+
+        <button class="btn-primary" id="calcBtn">Calculate Remaining</button>
+
+        <p class="warning hidden" id="budgetWarning">
+          Please enter valid numbers in both fields.
+        </p>
+
+        <div class="budget-result hidden" id="budgetResult">
+          <span class="result-label">Remaining Balance</span>
+          <span class="result-value" id="balanceDisplay">$0.00</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with vanilla JS &mdash; ZenDash</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
