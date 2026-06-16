@@ -12,19 +12,3 @@ A personal productivity dashboard built with plain HTML, CSS, and JavaScript. No
 
 **Light/dark mode** — toggle between a warm sand-toned light theme and a dark mode. Your preference is remembered.
 
-## How to run it
-
-Download the folder, double-click `index.html`. That's it.
-
-## Files
-
-```
-zendash/
-├── index.html
-├── style.css
-└── script.js
-```
-
-## Notes
-
-All three files are kept as simple as possible — no arrow functions, no modules, no build step. localStorage is used for both theme preference and task persistence. The task list is rebuilt from scratch every time something changes, which keeps the logic easy to follow.
